@@ -1,6 +1,11 @@
-const playlistId = "UUba6x58CC9LoFdEBrDqTqjw";
-const videosContainer = document.getElementById("videos-container");
-const loadMoreBtn = document.getElementById("load-more-btn");
+const videoIds = [
+    "0DghFzSe3Us",
+    "8hST8dCJy3U",
+    "EFmhhej886c",
+    "AtUXXaUhSWg",
+    "5JFnezRAwP4",
+    "ClTY3r2zsZg"
+];
 
 const videoTitles = [
     "Newest Video",
@@ -11,6 +16,9 @@ const videoTitles = [
     "And This Being Over a Year Old"
 ];
 
+const videosContainer = document.getElementById("videos-container");
+const loadMoreBtn = document.getElementById("load-more-btn");
+
 let videosShown = 0;
 const increment = 3;
 
@@ -18,7 +26,7 @@ function loadVideos() {
     const batchContainer = document.createElement("div");
     batchContainer.classList.add("videos-batch");
 
-    for (let i = videosShown; i < videosShown + increment && i < videoTitles.length; i++) {
+    for (let i = videosShown; i < videosShown + increment && i < videoIds.length; i++) {
         const card = document.createElement("div");
         card.classList.add("video-card");
 
@@ -26,7 +34,7 @@ function loadVideos() {
         wrapper.classList.add("video-wrapper");
 
         const iframe = document.createElement("iframe");
-        iframe.src = `https://www.youtube.com/embed?listType=playlist&list=${playlistId}&index=${i + 1}`;
+        iframe.src = `https://www.youtube.com/embed/${videoIds[i]}`;
         iframe.allowFullscreen = true;
 
         wrapper.appendChild(iframe);
@@ -46,7 +54,7 @@ function loadVideos() {
     videosContainer.appendChild(batchContainer);
 
     videosShown += increment;
-    if (videosShown >= videoTitles.length) {
+    if (videosShown >= videoIds.length) {
         loadMoreBtn.style.display = "none";
     }
 }
