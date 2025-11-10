@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>I Think I'm a Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="body.css">
+
+    <!-- Favicon using profile picture -->
+    <link rel="icon" href="channels4_profile.jpg" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Banner -->
+    <header class="banner-container">
+        <img src="channels4_banner.jpg" alt="Channel Banner" class="banner">
+    </header>
+
+    <!-- Navigation -->
+    <nav class="belowHeader">
+        <img src="channels4_profile.jpg" alt="Profile" class="profile-img">
+        <a href="index.html">Homepage</a>
+        <a href="https://www.youtube.com/@ithinkimanerd/featured">Channel</a>
+        <a href="history.html">History</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="emails.html">Reach Out</a>
+    </nav>
+
+    <!-- Latest Videos Section -->
+    <section id="latest-videos-section">
+        <h2>Latest Videos</h2>
+        <div id="videos-container">
+            <!-- Videos will appear here -->
+        </div>
+        <button id="load-more-btn">Load More Videos</button>
+    </section>
+
+    <!-- Personal Favorites Section -->
+    <section id="personal-favorites">
+    <h2>Personal Favorites</h2>
+
+    <div class="favorite-video">
+        <div class="video-thumb">
+            <iframe src="https://www.youtube.com/embed/ClTY3r2zsZg?start=1342" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+            <h3>We Played Zort Until We Could Zort No More</h3>
+            <p>Alex, Milo, and Joaquin play the greatest horror game of all time, Zort</p>
+        </div>
+    </div>
+
+    <div class="favorite-video">
+        <div class="video-thumb">
+            <iframe src="https://www.youtube.com/embed/5JFnezRAwP4?start=3" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+            <h3>Flightmare Gave Me a Fear of Flying || The Worst Countdown to Halloween</h3>
+            <p>The first video in Milo's Countdown to Halloween series</p>
+        </div>
+    </div>
+
+    <div class="favorite-video">
+        <div class="video-thumb">
+            <iframe src="https://www.youtube.com/embed/BPaVMFHXec4?start=289" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+            <h3>We Ranked EVERY Undertale Character On Attractiveness</h3>
+            <p>Do we need to explain more?</p>
+        </div>
+    </div>
+
+    <!-- New video with clickable thumbnail -->
+    <div class="favorite-video">
+        <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/X8o7z0kOut8/hqdefault.jpg"
+                 alt="A day out (with friends)"
+                 style="width:480px; height:270px; border-radius:12px; object-fit:cover; border: 4px solid white; cursor:pointer;"
+                 onclick="openVideo('https://www.youtube.com/watch?v=X8o7z0kOut8')">
+        </div>
+        <div class="video-info">
+            <h3>A day out (with friends)</h3>
+            <p>Alex has a day out (with friends)</p>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for thumbnail video -->
+<div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:10000;">
+    <div style="position:relative; width:80%; max-width:800px;">
+        <iframe id="modalIframe" src="" width="100%" height="450px" style="border-radius:12px;" allowfullscreen></iframe>
+        <button onclick="closeVideo()" style="position:absolute; top:-30px; right:0; font-size:30px; color:white; background:none; border:none; cursor:pointer;">&times;</button>
+    </div>
+</div>
+
+<script>
+function openVideo(url) {
+    document.getElementById('modalIframe').src = url.replace("watch?v=", "embed/");
+    document.getElementById('videoModal').style.display = "flex";
+}
+
+function closeVideo() {
+    document.getElementById('videoModal').style.display = "none";
+    document.getElementById('modalIframe').src = ""; // Stop the video
+}
+</script>
+
+
+    <script src="videos.js"></script>
+</body>
+</html>
