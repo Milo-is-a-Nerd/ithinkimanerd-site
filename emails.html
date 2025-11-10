@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Reach Out - I Think I'm a Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reach Out | I Think I'm a Nerd</title>
     <link rel="stylesheet" href="body.css">
     <link rel="icon" href="channels4_profile.jpg" type="image/x-icon">
 </head>
 <body>
-
     <!-- Banner -->
     <header class="banner-container">
         <img src="channels4_banner.jpg" alt="Channel Banner" class="banner">
@@ -24,79 +23,41 @@
         <a href="emails.html">Reach Out</a>
     </nav>
 
-    <!-- Reach Out Content -->
-<section id="our-history-section">
-    <h2 class="history-fade">Our History</h2>
+    <!-- Reach Out Section -->
+    <section id="reach-out-section">
+        <h2 class="reach-fade">Reach Out</h2>
+        <p class="reach-fade reach-out-intro">
+            A list of emails for fans or businesses who wish to reach out for whatever reason:
+        </p>
 
-    <!-- Early History -->
-    <div class="history-box history-left history-fade">
-        <div class="history-content">
-            <p>
-                This channel was created on <strong>December 20th, 2016</strong> by Alexander.
-                The first video was titled <strong>"Penguin Magic"</strong> and was published on
-                <strong>February 17th, 2017</strong>. From then until June 22nd, 2022, content
-                was uploaded somewhat regularly, mostly consisting of Alex and occasionally his dad,
-                <a href="https://www.youtube.com/@TheBeardedWoodworker" target="_blank">The Bearded Woodworker</a>.
-            </p>
+        <div class="reach-out-list">
+            <div class="reach-item"> <strong>Milo's Email:</strong> <a href="mailto:milo@ithinkimanerd.com">milo@ithinkimanerd.com</a> </div>
+            <div class="reach-item"> <strong>Alex's Email:</strong> <a href="mailto:alex@ithinkimanerd.com">alex@ithinkimanerd.com</a> </div>
+            <div class="reach-item"> <strong>Anyone Else Who Appears on I Think I'm a Nerd:</strong> <a href="mailto:everyone_else@ithinkimanerd.com">everyone_else@ithinkimanerd.com</a> </div>
+            <div class="reach-item"> <strong>Business:</strong> <a href="mailto:business@ithinkimanerd.com">business@ithinkimanerd.com</a> </div>
+            <div class="reach-item"> <strong>Customer Support:</strong> <a href="mailto:support@ithinkimanerd.com">support@ithinkimanerd.com</a> </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Revival Period -->
-    <div class="history-box history-right history-fade">
-        <div class="history-content">
-            <p>
-                For a period of about 2 years, almost no content was posted until <strong>May 31st, 2024</strong>.
-                This was a pivotal moment for I Think I'm a Nerd — it both revived the channel and introduced
-                <strong>Milo</strong>, who became a regular contributor.
-            </p>
-
-            <p>
-                Milo and Alex have been friends since early elementary school. During a school trip in May 2024,
-                while staying in a hotel, they decided to film multiple YouTube Shorts. In just two days,
-                they recorded and published <strong>15 Shorts</strong>. Since then, the channel has continued
-                posting both short and long-form content regularly.
-            </p>
-        </div>
-    </div>
-
-    <!-- Oldest Video -->
-    <div class="history-box history-left history-fade">
-        <div class="history-content">
-            <h3>Oldest Video</h3>
-            <iframe src="https://www.youtube.com/embed/YG06L-yETSo" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <!-- Biggest Video -->
-    <div class="history-box history-right history-fade">
-        <div class="history-content">
-            <h3>Biggest Video</h3>
-            <iframe src="https://www.youtube.com/embed/BPaVMFHXec4?start=289" allowfullscreen></iframe>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Scroll Animation Script -->
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const reachItems = document.querySelectorAll(".reach-fade");
+        // Scroll animation with staggered fade-in for header, intro, and emails
+        document.addEventListener("DOMContentLoaded", function() {
+            const reachElements = document.querySelectorAll("#reach-out-section .reach-fade, #reach-out-section .reach-item");
 
-        function revealReachItems() {
-            const triggerBottom = window.innerHeight * 0.85;
+            function revealReachElements() {
+                const triggerBottom = window.innerHeight * 0.85;
 
-            reachItems.forEach((item, index) => {
-                const rect = item.getBoundingClientRect().top;
-                if (rect < triggerBottom) {
-                    setTimeout(() => item.classList.add("visible"), index * 200);
-                }
-            });
-        }
+                reachElements.forEach((el, index) => {
+                    const rect = el.getBoundingClientRect().top;
+                    if (rect < triggerBottom && !el.classList.contains("visible")) {
+                        setTimeout(() => el.classList.add("visible"), index * 200); // stagger each by 200ms
+                    }
+                });
+            }
 
-        window.addEventListener("scroll", revealReachItems);
-        revealReachItems();
-    });
+            window.addEventListener("scroll", revealReachElements);
+            revealReachElements(); // initial check
+        });
     </script>
 </body>
 </html>
-
