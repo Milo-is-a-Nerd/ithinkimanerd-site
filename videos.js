@@ -1,10 +1,10 @@
 const videoIds = [
+    "RxXEiOiB0TY",
+    "GAG5nxQvuMk",
     "0DghFzSe3Us",
     "8hST8dCJy3U",
     "EFmhhej886c",
-    "AtUXXaUhSWg",
-    "5JFnezRAwP4",
-    "ClTY3r2zsZg"
+    "AtUXXaUhSWg"
 ];
 
 const videoTitles = [
@@ -77,3 +77,4 @@ function revealFavorites() {
 
 window.addEventListener("scroll", revealFavorites);
 revealFavorites();
+
