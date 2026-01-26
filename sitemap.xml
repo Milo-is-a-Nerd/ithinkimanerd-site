@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://ithinkimanerd.com/</loc>
+      <lastmod>2026-01-25</lastmod>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://ithinkimanerd.com/History/</loc>
+      <lastmod>2026-01-25</lastmod>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://ithinkimanerd.com/About-Us/</loc>
+      <lastmod>2026-01-25</lastmod>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://ithinkimanerd.com/Reach-Out/</loc>
+      <lastmod>2026-01-25</lastmod>
+      <priority>0.8</priority>
+   </url>
+</urlset>
