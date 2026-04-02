@@ -1,19 +1,19 @@
 const videoIds = [
+    "t8q9I4okhUA",
+    "X77lo17IZPM",
+    "iX-l388cczU",
     "RxXEiOiB0TY",
     "GAG5nxQvuMk",
-    "0DghFzSe3Us",
-    "8hST8dCJy3U",
-    "EFmhhej886c",
-    "AtUXXaUhSWg"
+    "0DghFzSe3Us"
 ];
 
 const videoTitles = [
     "Newest Video",
     "Middle Child",
     "Third Youngest",
-    "We Barely Post so This is Probably like 6 Months Old",
-    "Which Means This is 8 Months Old",
-    "And This Being Over a Year Old"
+    "The Forgotten 4th",
+    "Wow I Don't Remember This One",
+    "Why Are You Reading This?"
 ];
 
 const videosContainer = document.getElementById("videos-container");
