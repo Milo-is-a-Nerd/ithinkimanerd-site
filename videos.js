@@ -12,7 +12,7 @@ const videoTitles = [
     "Middle Child",
     "Third Youngest",
     "The Forgotten 4th",
-    "Wow I Don't Remember This One",
+    "Does It Even Matter What I Write Here?",
     "Why Are You Reading This?"
 ];
 
