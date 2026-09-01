@@ -1,10 +1,10 @@
 const videoIds = [
+    "CLevPdyGbOU",
+    "n-JHbtUJ5OA",
     "AL8-pId52yQ",
     "jVILqMo7DTw",
     "wG3MvHucLMM",
-    "t8q9I4okhUA",
-    "X77lo17IZPM",
-    "iX-l388cczU"
+    "t8q9I4okhUA"
 ];
 
 const videoTitles = [
